@@ -38,6 +38,7 @@ class FlutterSocialPlugin: FlutterPlugin, MethodCallHandler {
     val qqNum = call.argument<String>("qqNum")
     val intent = Intent()
     intent.data = Uri.parse("mqqwpa://im/chat?chat_type=wpa&uin=$qqNum")
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     try {
       context.startActivity(intent)
       result.success(true)
@@ -50,6 +51,7 @@ class FlutterSocialPlugin: FlutterPlugin, MethodCallHandler {
     val qqGroupKey = call.argument<String>("qqGroupKey")
     val intent = Intent()
     intent.data = Uri.parse("mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D$qqGroupKey")
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     try {
       context.startActivity(intent)
       result.success(true)
