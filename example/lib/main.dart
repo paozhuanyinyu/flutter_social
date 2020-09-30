@@ -54,17 +54,23 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Running on: $_platformVersion\n'),
-              IconButton(
-                  icon: Icon(Icons.contacts),
+              MaterialButton(
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Text("点击跳转QQ联系人"),
                   onPressed: ()async{
-                    bool isSuccess = await FlutterSocial.goToQQChat("qq号");
+                    //TODO 写上你想跳转的QQ号
+                    bool isSuccess = await FlutterSocial.goToQQChat("QQ号");
                     print("goToQQChat isSuccess: $isSuccess");
                   }
               ),
-              IconButton(
-                  icon: Icon(Icons.group),
+              MaterialButton(
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Text("点击跳转QQ群"),
                   onPressed: ()async{
-                    bool isSuccess = await FlutterSocial.goToQQGroup("qq群号","qq群的Key");
+                    //TODO 写上你想跳转的QQ群号和Key值
+                    bool isSuccess = await FlutterSocial.goToQQGroup("QQ群号","QQ群对应的Key值");
                     print("goToQQGroup isSuccess: $isSuccess");
                   }
               )

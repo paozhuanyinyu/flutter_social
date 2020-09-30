@@ -1,8 +1,7 @@
 name: flutter_social
-description: A new flutter plugin project.
+description: A new flutter plugin project for go to QQ Group and Contract.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/paozhuanyinyu/flutter_social
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

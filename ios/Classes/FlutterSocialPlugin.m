@@ -3,7 +3,7 @@
 @implementation FlutterSocialPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"kaige.com/fsocial"
+      methodChannelWithName:@"kaige.com/social"
             binaryMessenger:[registrar messenger]];
   FlutterSocialPlugin* instance = [[FlutterSocialPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
